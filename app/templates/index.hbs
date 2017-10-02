@@ -1,1 +1,25 @@
-{{outlet}}
+<div class="container">
+  <h3>Discover Your Perfect Home</h3>
+  <p>
+    With the most complete source of homes for sale and real estate near you
+  </p>
+  <p>We make finding a home as easy as a click.</p>
+
+  <ul>
+    {{#each model.propertys as |property|}}
+      <li>This {{property.bedrooms}} bedroom property located at {{property.location}} </li>
+    {{/each}}
+  </ul>
+
+  <h3>Announcements and Notices</h3>
+
+  <ul>
+    {{#each model.notices as |notice|}}
+      <li>In need of {{notice.title}} {{notice.about}}</li>
+    {{/each}}
+  </ul>
+
+  {{#link-to "about"}}What we do{{/link-to}}
+  <br>
+  {{#link-to "contact"}}Click here to contact us{{/link-to}}
+</div>
