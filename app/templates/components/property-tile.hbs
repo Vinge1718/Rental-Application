@@ -1,0 +1,9 @@
+<li>
+  This {{property.bedrooms}} bedroom property located at {{property.location}}.
+  {{#if isImageShowing}}
+    <p> <img src={{property.image}} alt={{property.location}} {{action "imageHide"}}> </p>
+  {{else}}
+    <button {{action "imageShow"}}>Show Image Preview</button>
+  {{/if}}
+</li>
+<br>
