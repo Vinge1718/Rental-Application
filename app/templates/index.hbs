@@ -7,7 +7,7 @@
 
   <ul>
     {{#each model.propertys as |property|}}
-      <li>This {{property.bedrooms}} bedroom property located at {{property.location}}. </li>
+      {{property-tile property=property}}
     {{/each}}
   </ul>
 
@@ -15,7 +15,7 @@
 
   <ul>
     {{#each model.notices as |notice|}}
-      <li>In need of {{notice.title}} {{notice.about}}</li>
+      {{notice-tile notice=notice}}
     {{/each}}
   </ul>
 
