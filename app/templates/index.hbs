@@ -7,18 +7,20 @@
 
   <ul>
     {{#each model.propertys as |property|}}
-      {{property-tile property=property}}
+      {{property-tile property=property deleteProperty="deleteProperty"}}
     {{/each}}
   </ul>
+  {{new-property saveProperty2="saveProperty3"}}
 
   <h3>Announcements and Notices</h3>
 
   <ul>
     {{#each model.notices as |notice|}}
-      {{notice-tile notice=notice}}
+      {{notice-tile notice=notice deleteNotice="deleteNotice"}}
     {{/each}}
   </ul>
-
+  {{new-notice saveNotice2="saveNotice3"}}
+  <br>
   {{#link-to "about"}}What we do{{/link-to}}
   <br>
   {{#link-to "contact"}}Click here to contact us{{/link-to}}
