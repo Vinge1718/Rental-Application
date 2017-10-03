@@ -1,0 +1,24 @@
+{{#if updateNoticeForm}}
+<h3>Update {{notice.title}} advert</h3>
+<div>
+  <form>
+    <div class="form-group">
+      <label for="title">Item Title</label>
+      {{input value=title placeholder=notice.title}}
+    </div>
+
+    <div class="form-group">
+      <label for="type">Advert Category</label>
+      {{input value=type placeholder=notice.type}}
+    </div>
+
+    <div class="form-group">
+      <label for="about">Contacts and Location</label>
+      {{input value=about placeholder=notice.about}}
+    </div>
+    <button {{action "updateAdvert" notice}}>Save</button>
+  </form>
+</div>
+{{else}}
+  <button {{action "updateNoticeForm"}}>Update</button>
+{{/if}}
