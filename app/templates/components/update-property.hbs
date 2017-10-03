@@ -1,0 +1,35 @@
+{{#if updatePropertyForm}}
+<h3>Update {{property.location}} in {{property.town}}</h3>
+<div>
+  <form>
+    <div class="form-group">
+      <label for="location">Property Location</label>
+      {{input value=location id="location" placeholder=property.location}}
+    </div>
+
+    <div class="form-group">
+      <label for="town">Town Area</label>
+      {{input value=town id="town" placeholder=property.town}}
+    </div>
+
+    <div class="form-group">
+      <label for="cost">Price Per Unit</label>
+      {{input value=cost id="cost" placeholder=property.cost}}
+    </div>
+
+    <div class="form-group">
+      <label for="bedrooms">Number of Bedrooms</label>
+      {{input value=bedrooms id="bedrooms" placeholder=property.bedrooms}}
+    </div>
+
+    <div class="form-group">
+      <label for="image">Image Preview URL</label>
+      {{input value=image id="image" placeholder=property.image}}
+    </div>
+
+    <button {{action "update" property}}>Save</button>
+  </form>
+</div>
+{{else}}
+  <button {{action "updatePropertyForm"}}>Update</button>
+{{/if}}
