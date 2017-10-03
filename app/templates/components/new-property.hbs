@@ -1,0 +1,35 @@
+{{#if addNewProperty}}
+  <h3>New Property</h3>
+  <div>
+    <form>
+      <div>
+        <label>Property Location</label>
+        {{input value=location}}
+      </div>
+
+      <div>
+        <label>Town Area</label>
+        {{input value=town}}
+      </div>
+
+      <div>
+        <label>Price Per Unit</label>
+        {{input value=cost}}
+      </div>
+
+      <div>
+        <label>Number of Bedrooms</label>
+        {{input value=bedrooms}}
+      </div>
+
+      <div>
+        <label>Image Preview</label>
+        {{input value=image}}
+      </div>
+
+      <button {{action "saveProperty1"}}>Save</button>
+    </form>
+  </div>
+{{else}}
+  <button {{action "propertyFormShow"}}>New Property</button>
+{{/if}}

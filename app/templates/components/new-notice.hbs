@@ -1,0 +1,24 @@
+{{#if addNewNotice}}
+  <h3>New Notice</h3>
+  <div>
+    <form>
+      <div>
+        <label for="title">Item Title</label>
+        {{input value=title}}
+      </div>
+
+      <div>
+        <label for="type">Advert Category</label>
+        {{input value=type}}
+      </div>
+
+      <div>
+        <label for="about">Contacts and Location</label>
+        {{input value=about}}
+      </div>
+      <button {{action "saveNotice1"}}>Save</button>
+    </form>
+  </div>
+{{else}}
+  <button {{action "noticeFormShow"}}>Post a Notice</button>
+{{/if}}
