@@ -21,6 +21,26 @@ import Ember from 'ember';
         this.transitionTo("index");
       },
 
+      update(property, params){
+        Object.keys(params).forEach(function(key){
+          if(params[key]!==undefined){
+            property.set(key,params[key]);
+          }
+        });
+        property.save();
+        this.transitionTo("index");
+      },
+
+      updateAdvert(notice, params){
+        Object.keys(params).forEach(function(key){
+          if(params[key]!==undefined){
+            notice.set(key, params[key]);
+          }
+        });
+        notice.save();
+        this.transitionTo("index");
+      },
+
       saveProperty3(params){
         var newProperty = this.store.createRecord("property", params);
         newProperty.save();
