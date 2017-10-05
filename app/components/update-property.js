@@ -16,6 +16,7 @@ export default Ember.Component.extend({
       };
       this.set("updatePropertyForm", false);
       this.sendAction("update", property, params);
-    }
+    },
+  
   }
 });

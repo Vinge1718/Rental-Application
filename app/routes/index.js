@@ -11,23 +11,8 @@ import Ember from 'ember';
     },
 
     actions: {
-      deleteProperty(property){
-        property.destroyRecord();
-        this.transitionTo("index");
-      },
-
       deleteNotice(notice){
         notice.destroyRecord();
-        this.transitionTo("index");
-      },
-
-      update(property, params){
-        Object.keys(params).forEach(function(key){
-          if(params[key]!==undefined){
-            property.set(key,params[key]);
-          }
-        });
-        property.save();
         this.transitionTo("index");
       },
 

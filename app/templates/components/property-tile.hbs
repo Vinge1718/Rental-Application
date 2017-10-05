@@ -1,11 +1,11 @@
 <li>
-  This {{property.bedrooms}} bedroom property located at {{property.location}}.
+  {{#link-to 'property' property.id}} Ksh.{{property.cost}} worth of property in {{property.location}} {{/link-to}}
+
   {{#if isImageShowing}}
     <p> <img src={{property.image}} alt={{property.location}} {{action "imageHide"}}> </p>
   {{else}}
     <button {{action "imageShow"}}>Show Image Preview</button>
   {{/if}}
-  {{update-property property=property update="update"}}
-  <button {{action "delete" property}}>Delete Property listing</button>
+
 </li>
 <br>
